@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>ERS App</title>
+</head>
+<body>
+    <form action="/login" method="post">
+        username: <input name="username" type="text" /> <br />
+        password: <input name="password" type="text" /> <br />
+        <input type="submit" value="Login"/>
+    </form>
+</br>
+<a href="/users"><button type="button">Get All Users</button></a>
+</br></br>
+<form action="/users/id" method="post">
+    userId: <input name="userid" type="text" /> <input type="submit" value="Get Solo User by userId #"/>
+</form>
+</br></br>
+<form action="/reimbursements/author" method="post">
+    userId: <input name="userid" type="text" /> <input type="submit" value="Get Reimbursements by userId #"/>
+</form>
+</br></br>
+<form action="/reimbursements/status" method="post">
+    Reim Status: <select name="status" id="status">
+        <option value="Pending">Pending</option>
+        <option value="Approved">Approved</option>
+        <option value="Denied">Denied</option>
+      </select> <input type="submit" value="Get Reimbursements by Status"/>
+</form>
+</br></br>
+<a href="/logout"><button type="button">Logout</button></a>
+</body>
+</html>
